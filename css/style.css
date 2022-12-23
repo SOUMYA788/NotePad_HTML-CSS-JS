@@ -1,0 +1,253 @@
+@font-face {
+	font-family: ubantu;
+	src: url(./Ubuntu-Regular.ttf);
+}
+
+@font-face {
+	font-family: quicksand;
+	src: url(./Quicksand-Regular.ttf);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body{
+	font-size: calc((1vw + 1em)/2);
+}
+
+
+nav {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	align-content: center;
+	background-color: #696969;
+	color: white;
+	padding: 5px 10px;
+}
+
+
+nav a {
+	text-decoration: none;
+	color: white;
+	letter-spacing: 2px;
+}
+
+
+nav input {
+	padding: 10px;
+	outline: none;
+	border: none;
+}
+
+
+#notePad {
+	position: relative;
+	width: 100%;
+	margin-top: 10px;
+}
+
+
+div#addNote {
+	width: 50vw;
+	height: 60vh;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	background-color: #6A8BC2;
+	padding: 10px 30px;
+	border-radius: 10px;
+	position: absolute;
+	left: 50%;
+	top: -50%;
+	transform: translate(-50%, -50%);
+	transition: 0.5s ease;
+}
+
+
+div#addNote input#addTitle,
+div#addNote textarea#noteBody {
+	width: 100%;
+	outline: none;
+	border: 1px solid black;
+	padding: 10px;
+}
+
+
+div#addNote textarea#noteBody {
+	max-width: 100%;
+	min-width: 100%;
+	max-height: 50%;
+	min-height: 50%;
+}
+
+
+#addNoteOptions {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-evenly;
+	align-content: center;
+	flex-wrap: wrap;
+}
+
+
+#addNoteOptions button {
+	padding: 10px 15px;
+	transition: 0.2s ease;
+	background-color: #242424;
+	width: 100px;
+	text-align: center;
+	cursor: pointer;
+	font-family: quicksand;
+	border: none;
+	outline: none;
+	font-weight: 600;
+	letter-spacing: 2px;
+}
+
+
+#addNoteOptions #add_note {
+	color: #4FCEA2;
+}
+
+
+#addNoteOptions #add_note:hover,
+.edit_card:hover {
+	background-color: #4FCEA2;
+	color: #242424;
+}
+
+
+#addNoteOptions #discard_note:hover,
+.delete_card:hover {
+	color: black;
+	background-color: #FF4250;
+}
+
+
+#addNoteOptions #add_note:active{
+	color: #4FCEA2;
+	background-color: #242424;
+}
+
+
+#addNoteOptions #discard_note {
+	color: #FF4250;
+}
+
+
+#diaplay_notes {
+	width: 80vw;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+	justify-items: center;
+	margin: 0 auto;
+	flex-wrap: wrap;
+	align-content: center;
+
+}
+
+
+.note_card,
+.adjust {
+	width: calc(100%/4);
+    height: 320px;
+    margin: 1%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    align-content: center;
+}
+
+
+.note_card {
+	background-color: #F2AE30;
+	color: black;
+}
+
+
+.adjust {
+	text-align: center;
+	background-color: #242424;
+	transition: 0.2s ease;
+}
+
+
+.adjust svg {
+	width: 50%;
+	height: 50%;
+	fill: #F2AE30;
+}
+
+
+.adjust:hover{ 
+	cursor: pointer;
+	background-color: #4FCEA2;
+}
+
+
+.adjust:hover svg{
+	fill: black;
+}
+
+
+.note_headding {
+	font-family: "ubantu";
+	text-align: center;
+}
+
+.notes {
+	font-family: "quicksand";
+}
+
+
+.card_options {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	text-align: center;
+	align-items: center;
+	align-content: center;
+	flex-wrap: wrap;
+	font-family: quicksand;
+}
+
+.card_options p {
+	padding: 5px;
+	transition: 0.2s ease;
+	background-color: #242424;
+	width: 40%;
+}
+
+.edit_card {
+	color: #4FCEA2;
+}
+
+.delete_card {
+	color: #FF4250;
+}
+
+.card_options p:hover {
+	cursor: pointer;
+	border-radius: 3px;
+}
+
+
+
+#add_new_note {
+	font-size: 3rem;
+}
