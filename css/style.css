@@ -1,11 +1,11 @@
 @font-face {
 	font-family: ubantu;
-	src: url(./Ubuntu-Regular.ttf);
+	src: url(../fonts/Ubuntu-Regular.ttf);
 }
 
 @font-face {
 	font-family: quicksand;
-	src: url(./Quicksand-Regular.ttf);
+	src: url(../fonts/Quicksand-Regular.ttf);
 }
 
 * {
@@ -72,7 +72,7 @@ div#addNote {
 }
 
 
-div#addNote input#addTitle,
+div#addNote input#noteTitle,
 div#addNote textarea#noteBody {
 	width: 100%;
 	outline: none;
@@ -115,19 +115,22 @@ div#addNote textarea#noteBody {
 }
 
 
-#addNoteOptions #add_note {
+#addNoteOptions #add_note_btn {
 	color: #4FCEA2;
 }
 
+#addNoteOptions #discard_note_btn {
+	color: #FF4250;
+}
 
-#addNoteOptions #add_note:hover,
+#addNoteOptions #add_note_btn:hover,
 .edit_card:hover {
 	background-color: #4FCEA2;
 	color: #242424;
 }
 
 
-#addNoteOptions #discard_note:hover,
+#addNoteOptions #discard_note_btn:hover,
 .delete_card:hover {
 	color: black;
 	background-color: #FF4250;
@@ -139,10 +142,11 @@ div#addNote textarea#noteBody {
 	background-color: #242424;
 }
 
-
-#addNoteOptions #discard_note {
+#addNoteOptions #discard_note_btn:active{
 	color: #FF4250;
+	background-color: #242424;
 }
+
 
 
 #diaplay_notes {
